@@ -37,47 +37,23 @@ public class WorldPartition : MonoBehaviour
     public Terrain GetPartitionTerrain()
     {
         return m_worldPartitionTerrain.GetComponent<Terrain>();
+        
     }
 
     [ContextMenu("Unload Terrain")]
     public void UnloadTerrain()
     {
         loaded = false;
-        m_path = Application.persistentDataPath + "/" + gameObject.name + ".dat";
-        Debug.Log(m_path);
-        FileStream file;
-
-        if (File.Exists(m_path))
-            file = File.OpenWrite(m_path);
-
-        else file = File.Create(m_path);
-
-        BinaryFormatter bf = new BinaryFormatter();
-        bf.Serialize(file, m_data);
-        file.Close();
-
+        DataManager.SaveData(out m_path, m_data, gameObject.name);
         Destroy(m_worldPartitionTerrain);
-        Resources.UnloadUnusedAssets();
     }
 
     [ContextMenu("Load Terrain")]
     public void LoadTerrain()
     {
         loaded = true;
-        string destination = m_path;
-        FileStream file;
-
-        if (File.Exists(destination)) file = File.OpenRead(destination);
-        else
-        {
-            Debug.LogError("File not found");
-            return;
-        }
-
-        BinaryFormatter bf = new BinaryFormatter();
-        PartitionData data = (PartitionData) bf.Deserialize(file);
-        file.Close();
-
+        var data = (PartitionData)DataManager.LoadData(m_path);
+        
         TerrainData tData = new TerrainData();
         tData.heightmapResolution = data.terrainHeightmapRes;
         tData.baseMapResolution = 128;
@@ -125,23 +101,5 @@ public class WorldPartition : MonoBehaviour
     {
         return new Vector3(m_position.x, 0, m_position.y);
     }
-
-    /*
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            LoadTerrain(); 
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            
-            UnloadTerrain();
-        }
-    }
-    */
+    
 }

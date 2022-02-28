@@ -2,25 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerrainPartitionData
-{
-    public int terrainHeightmapRes;
-    public float[,] terrainHeights;
-
-    public TerrainPartitionData(float[,] heights, int heightMapRes, int baseRes)
-    {
-        terrainHeights = heights;
-        terrainHeightmapRes = heightMapRes;
-    }
-}
-
-
-
-public class TerrainLODData
-{
-    
-}
-
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
 public class TerrainPartition : MonoBehaviour
@@ -38,33 +19,37 @@ public class TerrainPartition : MonoBehaviour
     [ContextMenu("Create Terrain")]
     public void CreateTerrain()
     {
+        // create all of the LODS for the terrain for this partition 
+        // log all of this lod data.. don't actually make the obects (just need the data
+        
+        // set the data for this terrain (overall object data, this contains the LOD data)
+        // we can then move this terrain piece around, and just assign different data to it.
         m_meshRenderer = GetComponent<MeshRenderer>();
         m_meshFilter = GetComponent<MeshFilter>();
         
         m_triangles = new List<int>();
         m_vertices = new List<Vector3>();
         
-        float spacingAmount = m_sizeXY / m_resolution;
-        float spacingX = 0;
-        float spacingY = 0;
+        float vertexWidth = m_sizeXY / m_resolution;
+        float vertexX = 0;
+        float vertexY = 0;
 
         for (int x = 0; x < m_resolution; x++)
         {
             for (int y = 0; y < m_resolution; y++)
             {
-                m_vertices.Add(new Vector3(spacingX,0,spacingY));
-                spacingX += spacingAmount;
+                m_vertices.Add(new Vector3(vertexX,0,vertexY));
+                vertexX += vertexWidth;
             }
-            
-            spacingY += spacingAmount;
-            spacingX = 0;
+            vertexY += vertexWidth;
+            vertexX = 0;
         }
         
-        for (int x = 0; x < m_resolution; x++)
+        for (int x = 0; x < m_resolution - 1; x++)
         {
-            for (int y = 0; y < m_resolution; y++)
+            for (int y = 0; y < m_resolution -1; y++)
             {
-                int vertexIndex = x * (m_resolution - 1) + y;
+                int vertexIndex = x * m_resolution + y;
                 m_triangles.Add(vertexIndex);
                 m_triangles.Add(vertexIndex + m_resolution);
                 m_triangles.Add(vertexIndex + m_resolution + 1);
@@ -79,14 +64,15 @@ public class TerrainPartition : MonoBehaviour
         m_meshFilter.sharedMesh.vertices = m_vertices.ToArray();
         m_meshFilter.sharedMesh.triangles = m_triangles.ToArray();
     }
-
-    private void GenerateTerrainGrid()
+    
+    private void SetTerrainObjectData()
     {
-        
+        // feed in the object data. sets this terrain stuff to the default?
+    }
+
+    private void SetTerrainHeight()
+    {
+        // seperate function to just set the terrain height based
     }
     
-    // Needs it own terrainPartitionData
-    // Create the terrain
-
-    // Set the terrains height
 }

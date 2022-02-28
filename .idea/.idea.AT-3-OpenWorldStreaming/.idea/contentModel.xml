@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Sam Stamp\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Sam Stamp\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_AT-3-OpenWorldStreaming.1102622505.00" t="ExcludeRecursive" />
+    <e p="D:\University Files\3rd Year\AT\Task 3\Project\AT-3-OpenWorldStreaming" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Mesh" t="Include">
+            <e p="MeshData.cs" t="Include" />
+          </e>
+          <e p="SimpleCameraController.cs" t="Include" />
+          <e p="World Streaming" t="Include">
+            <e p="Data" t="Include">
+              <e p="DataManager.cs" t="Include" />
+            </e>
+            <e p="Mesh Creation" t="Include">
+              <e p="TerrainObject.cs" t="Include" />
+            </e>
+            <e p="Terrain" t="Include">
+              <e p="TerrainLODData.cs" t="Include" />
+              <e p="TerrainObjectData.cs" t="Include" />
+            </e>
+            <e p="TerrainPartition.cs" t="Include" />
+            <e p="WorldPartition.cs" t="Include" />
+            <e p="WorldStreaming.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="AT-3-OpenWorldStreaming.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

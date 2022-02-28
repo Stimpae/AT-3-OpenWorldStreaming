@@ -10,11 +10,9 @@ public class WorldStreaming : MonoBehaviour
 {
     public Texture2D terrainTexture;
     public GameObject partitionObject;
-    public int terrainSplitX = 4;
-    public int terrainSplitY = 4;
     public int terrainSectionWidth = 100;
     public int terrainSectionHeight = 100;
-    public int terrainResolution = 512;
+    public int terrainResolution = 128;
     public Camera player;
 
     private List<WorldPartition> m_sections = new List<WorldPartition>();
@@ -103,7 +101,6 @@ public class WorldStreaming : MonoBehaviour
                 go.name = "Partition - " + x + "," + y;
                 go.GetComponent<WorldPartition>().InstantiateWorldPartition(this, texture, position.z, position.x);
                 go.GetComponent<WorldPartition>().UnloadTerrain();
-                
                 m_sections.Add(go.GetComponent<WorldPartition>());
             }
         }
