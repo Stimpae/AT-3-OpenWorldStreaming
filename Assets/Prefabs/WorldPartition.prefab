@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4751361943182333285}
   - component: {fileID: 1675508855197443221}
   m_Layer: 0
-  m_Name: StreamingSection
+  m_Name: WorldPartition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5c9bd62c0b2544cb9537ea7ca992bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loaded: 0
+  m_terrainPartition: {fileID: 8261898066070705984, guid: 58059d7df3529634c8160efdf62a9b20, type: 3}
 --- !u!65 &1675508855197443221
 BoxCollider:
   m_ObjectHideFlags: 0

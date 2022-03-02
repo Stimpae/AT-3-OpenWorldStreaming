@@ -26,6 +26,7 @@ public class WorldStreaming : MonoBehaviour
     
     private void Update()
     {
+        /*
         foreach (var section in m_sections)
         {
             if (Vector3.Distance(player.transform.position, section.GetPartitionPosition()) >  100 * 2)
@@ -45,6 +46,7 @@ public class WorldStreaming : MonoBehaviour
                 }
             }
         }
+        */
     }
 
 
@@ -82,7 +84,7 @@ public class WorldStreaming : MonoBehaviour
             for (var x = 0; x < tileAmountX; x++)
             {
                 Vector3 position = new Vector3(x * terrainSectionWidth, 0.0f, y * terrainSectionHeight);
-
+                /*
                 // get the bottom left pixel coordinate of the current tile
                 var bottomLeftPixelX = x * tileSize.x;
                 var bottomLeftPixelY = y * tileSize.y;
@@ -96,11 +98,11 @@ public class WorldStreaming : MonoBehaviour
                 // write the pixels into the new texture
                 texture.SetPixels(pixels);
                 texture.Apply();
-
+                */
+                
                 var go = Instantiate(partitionObject, this.gameObject.transform);
                 go.name = "Partition - " + x + "," + y;
-                go.GetComponent<WorldPartition>().InstantiateWorldPartition(this, texture, position.z, position.x);
-                go.GetComponent<WorldPartition>().UnloadTerrain();
+                go.GetComponent<WorldPartition>().InstantiateWorldPartition(terrainTexture, position.z, position.x);
                 m_sections.Add(go.GetComponent<WorldPartition>());
             }
         }

@@ -331,8 +331,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrainTexture: {fileID: 2800000, guid: 5b8b8c76adbe24f45b6bc7a6472d9aee, type: 3}
   partitionObject: {fileID: 7192699562507625077, guid: dc814f99f8d736c469077cde9c167b9d, type: 3}
-  terrainSectionWidth: 50
-  terrainSectionHeight: 50
+  terrainSectionWidth: 100
+  terrainSectionHeight: 100
   terrainResolution: 128
   player: {fileID: 384562693}
 --- !u!222 &912342815

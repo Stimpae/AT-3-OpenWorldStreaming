@@ -6,19 +6,53 @@ using UnityEngine;
 public class MeshData
 {
     // store everything in 1 dimensional arrays.
-    [SerializeField] public List<float> vertices;
-    [SerializeField] public List<int> triangles;
-    [SerializeField] public List<float> uv;
-    [SerializeField] public List<float> normals;
+    [SerializeField] public float[] vertices;
+    [SerializeField] public int[] triangles;
+    [SerializeField] public float[] uv;
+    [SerializeField] public float[] normals;
 
     // take in the mesh and start constructing data fields
     public MeshData(Mesh mesh)
     {
-        vertices = new List<float>();
-        triangles = new List<int>();
-        uv = new List<float>();
-        normals = new List<float>();
-        
         // loop through all of the mesh data
+        
+        if (mesh.vertexCount > 0)
+        {
+            vertices = new float[mesh.vertexCount * 3];
+            for (int i = 0; i < mesh.vertexCount; i++)
+            {
+                vertices[i * 3] = mesh.vertices[i].x;
+                vertices[i * 3 + 1] = mesh.vertices[i].y;
+                vertices[i * 3 + 2] = mesh.vertices[i].z;
+            }
+        }
+
+        if (mesh.triangles.Length > 0)
+        {
+            triangles = new int[mesh.triangles.Length];
+            for (int i = 0; i < mesh.triangles.Length; i++)
+            {
+                triangles[i] = mesh.triangles[i];
+            }
+        }
+    }
+
+    // returns the mesh data related to this data object
+    public Mesh GetMesh()
+    {
+        Mesh mesh = new Mesh();
+        
+        List<Vector3> verticesList = new List<Vector3>();
+        for (int i = 0; i < vertices.Length / 3; i++)
+        {
+            verticesList.Add(new Vector3(
+                vertices[i * 3], vertices[i * 3 + 1], vertices[i * 3 + 2]
+            ));
+        }
+        mesh.SetVertices(verticesList);
+
+        mesh.triangles = triangles;
+        
+        return new Mesh();
     }
 }

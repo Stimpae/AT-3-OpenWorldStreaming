@@ -20,15 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e82a927-dc09-43c5-ad77-a286f6684c23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StreamingSection.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StreamingSection.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/PartitionManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/PartitionManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-MediumQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-MediumQuality.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +43,20 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../CGD/CGD-2022/Assets/Core/Scripts/GameTeamData.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/PartitionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/DataManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" />
       </list>
     </option>
   </component>
@@ -96,7 +101,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646078924659</updated>
-      <workItem from="1646078929677" duration="7814000" />
+      <workItem from="1646078929677" duration="10891000" />
+      <workItem from="1646138296086" duration="12358000" />
+      <workItem from="1646171554771" duration="6024000" />
     </task>
     <servers />
   </component>
@@ -115,18 +122,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="93" y="93" width="2108" height="744" key="VCS.FileHistoryDialog" timestamp="1646084492556">
-      <screen x="0" y="0" width="2293" height="929" />
+    <state x="62" y="83" width="1413" height="668" key="VCS.FileHistoryDialog" timestamp="1646144656686">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="62" y="83" width="1413" height="668" key="VCS.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1646144656686" />
     <state x="93" y="93" width="2108" height="744" key="VCS.FileHistoryDialog/0.0.2293.929@0.0.2293.929" timestamp="1646084492556" />
-    <state x="810" y="198" width="672" height="678" key="search.everywhere.popup" timestamp="1646082131964">
-      <screen x="0" y="0" width="2293" height="929" />
+    <state x="367" y="162" key="Vcs.Push.Dialog.v2" timestamp="1646216821045">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="367" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1646216821045" />
+    <state x="543" y="178" width="672" height="609" key="search.everywhere.popup" timestamp="1646147152852">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="543" y="178" width="672" height="609" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1646147152852" />
     <state x="810" y="198" width="672" height="678" key="search.everywhere.popup/0.0.2293.929@0.0.2293.929" timestamp="1646082131964" />
   </component>
 </project>

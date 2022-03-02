@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerrainLOD : MonoBehaviour
+[System.Serializable]
+public enum ELevelOfDetail
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    LOD0,
+    LOD1,
+    LOD2
+}
 
-    // Update is called once per frame
-    void Update()
+[System.Serializable]
+public class TerrainLODData
+{
+    [SerializeField] private ELevelOfDetail m_lod;
+    [SerializeField] private string m_path;
+    //[SerializeField] private MeshData m_meshData;
+    public ELevelOfDetail LOD => m_lod;
+    public string Path => m_path;
+    //public MeshData MeshData => m_meshData;
+
+    public TerrainLODData(ELevelOfDetail lod, string path)
     {
-        
+        m_lod = lod;
+        m_path = path;
     }
 }
