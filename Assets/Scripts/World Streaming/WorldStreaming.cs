@@ -15,6 +15,12 @@ public class WorldStreaming : MonoBehaviour
     public int tilingAmount = 14;
     public Camera player;
 
+    [Header("LOD Settings")] 
+    public float lod0Range = 0;
+    public float lod1Range = 100;
+    public float lod2Range = 200;
+    public float lod3Range = 300;
+
     private List<WorldPartition> m_sections = new List<WorldPartition>();
     private List<Terrain> m_terrainSections = new List<Terrain>();
     private Vector2 m_sectionSize;
@@ -26,30 +32,29 @@ public class WorldStreaming : MonoBehaviour
     
     private void Update()
     {
-        /*
         foreach (var section in m_sections)
         {
-            if (Vector3.Distance(player.transform.position, section.GetPartitionPosition()) >  100 * 2)
+            if (Vector3.Distance(player.transform.position, section.GetPartitionPosition()) > lod0Range && Vector3.Distance(player.transform.position, section.GetPartitionPosition()) < lod1Range)
             {
-                if (section.loaded)
-                {
-                    section.UnloadTerrain();
-                    //section.UnloadTerrain();
-                }
+                section.UpdateLOD(ELevelOfDetail.LOD0);
             }
-            else
+            
+            if(Vector3.Distance(player.transform.position, section.GetPartitionPosition()) > lod1Range && Vector3.Distance(player.transform.position, section.GetPartitionPosition()) < lod2Range)
             {
-                if(!section.loaded)
-                {
-                    section.LoadTerrain();
-                    //section.LoadTerrain();
-                }
+                section.UpdateLOD(ELevelOfDetail.LOD1);
+            }
+            
+            if(Vector3.Distance(player.transform.position, section.GetPartitionPosition()) > lod2Range && Vector3.Distance(player.transform.position, section.GetPartitionPosition()) < lod3Range)
+            {
+                section.UpdateLOD(ELevelOfDetail.LOD2);
+            }
+            
+            if(Vector3.Distance(player.transform.position, section.GetPartitionPosition()) > lod3Range)
+            {
+                section.UpdateLOD(ELevelOfDetail.LOD3);
             }
         }
-        */
     }
-
-
     
     private void CheckDistance()
     {

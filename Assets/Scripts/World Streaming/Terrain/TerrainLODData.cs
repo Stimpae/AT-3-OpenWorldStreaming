@@ -7,7 +7,8 @@ public enum ELevelOfDetail
 {
     LOD0,
     LOD1,
-    LOD2
+    LOD2,
+    LOD3
 }
 
 [System.Serializable]

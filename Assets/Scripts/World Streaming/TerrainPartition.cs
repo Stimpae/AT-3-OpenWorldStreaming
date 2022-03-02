@@ -3,39 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TerrainPartition : MonoBehaviour
+public static class TerrainPartition
 {
-    private MeshFilter _meshFilter;
-    private MeshRenderer _meshRenderer;
-    private TerrainObjectData _terrainObjectData;
-    
-    public List<float> newHeight = new List<float>();
-    
-    public void CreateTerrain(int size,Texture2D heightmap, Vector2 offset)
+    public static GameObject CreateTerrainObject(int size,Texture2D heightmap, Material mat, Vector2 offset)
     {
-        //GameObject go = new GameObject();
-        _terrainObjectData = new TerrainObjectData();
-
-        _meshFilter = GetComponent<MeshFilter>();
-        _meshRenderer = GetComponent<MeshRenderer>();
-
-        //newHeight = height;
+        GameObject go = new GameObject();
         
-        CreateTerrainData(ELevelOfDetail.LOD0, size, heightmap, offset);
-        //CreateTerrainData(ELevelOfDetail.LOD1, size, terrainResolution / 2, height);
-        //CreateTerrainData(ELevelOfDetail.LOD2, size, terrainResolution / 4, height);
-        
-        //terrainObjectData = _terrainObjectData;
-        //_meshFilter.sharedMesh = terrainObjectData.lODData.MeshData.GetMesh();
+
+        MeshFilter meshFilter;
+        MeshRenderer meshRenderer;
+        meshFilter = go.AddComponent<MeshFilter>();
+        meshRenderer = go.AddComponent<MeshRenderer>();
+
+        meshRenderer.material = mat;
+        return go;
+    }
+
+    private static int GetLODAmount(ELevelOfDetail lod)
+    {
+        switch (lod)
+        {
+            case ELevelOfDetail.LOD0:
+                return 2;
+            case ELevelOfDetail.LOD1:
+                return 4;
+            case ELevelOfDetail.LOD2:
+                return 8;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(lod), lod, null);
+        }
     }
     
-    private void CreateTerrainData(ELevelOfDetail lod, int size,  Texture2D heightmap, Vector2 offset)
+    public static Mesh CreateTerrainMesh(ELevelOfDetail lod, int size,  Texture2D heightmap, Vector2 offset)
     {
         List<Vector3> vertices = new List<Vector3>();
         List<int> triangles = new List<int>();
         
         // 0 // 8 // 16;
-        int levelOfDetail = 0;
+        int levelOfDetail = GetLODAmount(lod);
 
         float topLeftX = (size - 1) / -2f;
         float topLeftZ = (size - 1) / 2f;
@@ -70,21 +75,8 @@ public class TerrainPartition : MonoBehaviour
         mesh.vertices = vertices.ToArray();
         mesh.triangles = triangles.ToArray();
         mesh.RecalculateNormals();
-        _meshFilter.sharedMesh = mesh;
-        // returns mesh
 
-        //TerrainLODData data = new TerrainLODData(ELevelOfDetail.LOD0, "hfdsfd");
-        
-        // figure out a more appropriate place to save the mesh data?
-        // calculate the lods at runtime?
-        
-        //MeshData meshData = new MeshData(mesh);
-        //StartCoroutine(StartSomething(mesh));
+        return mesh;
     }
-
-    IEnumerator StartSomething(Mesh mesh)
-    {
-        yield return new WaitForSeconds(5);
-        //MeshData meshData = new MeshData(mesh);
-    }
+    
 }

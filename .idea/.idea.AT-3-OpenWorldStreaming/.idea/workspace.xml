@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e82a927-dc09-43c5-ad77-a286f6684c23" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefaultTerrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/M_DefaultTerrain.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +42,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/DataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
       </list>
     </option>
   </component>
@@ -99,6 +94,9 @@
       <workItem from="1646078929677" duration="10891000" />
       <workItem from="1646138296086" duration="12358000" />
       <workItem from="1646171554771" duration="14901000" />
+      <workItem from="1646233093748" duration="47000" />
+      <workItem from="1646239871103" duration="3765000" />
+      <workItem from="1646259580926" duration="985000" />
     </task>
     <servers />
   </component>

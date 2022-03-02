@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5c9bd62c0b2544cb9537ea7ca992bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_terrainPartition: {fileID: 8261898066070705984, guid: 58059d7df3529634c8160efdf62a9b20, type: 3}
+  worldMaterial: {fileID: 2100000, guid: 22a74151106389a49994bbf746335d53, type: 2}
 --- !u!65 &1675508855197443221
 BoxCollider:
   m_ObjectHideFlags: 0

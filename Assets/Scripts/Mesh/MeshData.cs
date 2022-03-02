@@ -14,8 +14,6 @@ public class MeshData
     // take in the mesh and start constructing data fields
     public MeshData(Mesh mesh)
     {
-        // loop through all of the mesh data
-        
         if (mesh.vertexCount > 0)
         {
             vertices = new float[mesh.vertexCount * 3];
