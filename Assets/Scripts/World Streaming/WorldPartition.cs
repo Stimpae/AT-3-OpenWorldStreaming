@@ -30,6 +30,6 @@ public class WorldPartition : MonoBehaviour
         transform.position = new Vector3(m_position.x, 0.0f, m_position.y);
 
         m_worldPartitionTerrain = Instantiate(m_terrainPartition, this.transform);
-        m_worldPartitionTerrain.GetComponent<TerrainPartition>().CreateTerrain(129, 129, heightmap, m_position);
+        m_worldPartitionTerrain.GetComponent<TerrainPartition>().CreateTerrain(200 + 1, heightmap, m_position);
     }
 }

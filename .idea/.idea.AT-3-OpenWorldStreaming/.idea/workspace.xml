@@ -21,13 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0e82a927-dc09-43c5-ad77-a286f6684c23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StreamingSection.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/StreamingSection.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefaultTerrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/M_DefaultTerrain.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" afterDir="false" />
@@ -54,9 +49,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
       </list>
     </option>
   </component>
@@ -103,7 +98,7 @@
       <updated>1646078924659</updated>
       <workItem from="1646078929677" duration="10891000" />
       <workItem from="1646138296086" duration="12358000" />
-      <workItem from="1646171554771" duration="6024000" />
+      <workItem from="1646171554771" duration="14901000" />
     </task>
     <servers />
   </component>
@@ -137,10 +132,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="367" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1646216821045" />
-    <state x="543" y="178" width="672" height="609" key="search.everywhere.popup" timestamp="1646147152852">
+    <state x="542" y="178" width="672" height="609" key="search.everywhere.popup" timestamp="1646224731150">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="543" y="178" width="672" height="609" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1646147152852" />
+    <state x="542" y="178" width="672" height="609" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1646224731150" />
     <state x="810" y="198" width="672" height="678" key="search.everywhere.popup/0.0.2293.929@0.0.2293.929" timestamp="1646082131964" />
   </component>
 </project>

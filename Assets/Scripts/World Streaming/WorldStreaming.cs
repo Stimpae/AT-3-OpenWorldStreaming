@@ -12,7 +12,7 @@ public class WorldStreaming : MonoBehaviour
     public GameObject partitionObject;
     public int terrainSectionWidth = 100;
     public int terrainSectionHeight = 100;
-    public int terrainResolution = 128;
+    public int tilingAmount = 14;
     public Camera player;
 
     private List<WorldPartition> m_sections = new List<WorldPartition>();
@@ -72,7 +72,8 @@ public class WorldStreaming : MonoBehaviour
         // get the source dimensions
         var sourceWidth = terrainTexture.width;
         var sourceHeight = terrainTexture.height;
-
+        int terrainResolution = sourceWidth / tilingAmount;
+        
         var tileSize = new Vector2Int(terrainResolution + 1, terrainResolution + 1);
 
         // Check how often the given tileSize fits into the image
@@ -84,6 +85,7 @@ public class WorldStreaming : MonoBehaviour
             for (var x = 0; x < tileAmountX; x++)
             {
                 Vector3 position = new Vector3(x * terrainSectionWidth, 0.0f, y * terrainSectionHeight);
+                
                 /*
                 // get the bottom left pixel coordinate of the current tile
                 var bottomLeftPixelX = x * tileSize.x;
@@ -99,7 +101,7 @@ public class WorldStreaming : MonoBehaviour
                 texture.SetPixels(pixels);
                 texture.Apply();
                 */
-                
+
                 var go = Instantiate(partitionObject, this.gameObject.transform);
                 go.name = "Partition - " + x + "," + y;
                 go.GetComponent<WorldPartition>().InstantiateWorldPartition(terrainTexture, position.z, position.x);
