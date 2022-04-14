@@ -72,7 +72,7 @@
               <e p="TerrainObjectData.cs" t="Include" />
             </e>
             <e p="TerrainObject.cs" t="Include" />
-            <e p="WorldChunk.cs" t="Include" />
+            <e p="WorldChun.cs" t="Include" />
             <e p="WorldComposition.cs" t="Include" />
             <e p="WorldStreaming.cs" t="Include" />
           </e>

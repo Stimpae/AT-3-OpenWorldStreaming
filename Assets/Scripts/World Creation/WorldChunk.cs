@@ -4,84 +4,136 @@ using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 namespace World_Creation
 {
-    public class WorldChunk : MonoBehaviour
+    // position of the chunk within world space
+    // needs its own class
+    public class ChunkCoordinate
     {
-        public GameObject enemyPrefab;
-        public GameObject treePrefab;
-        public Color grassColour;
-        public Color darkGrassColour;
-        public Color edgeColour;
-        public Material terrainMaterial;
-        public Material waterMaterial;
-        public int chunkSize = 100;
-        public float scale = .1f;
-        public float colourNoiseScale = .1f;
-        public float treeNoiseScale = -.05f;
-        public float treeDensity = .5f;
-        public float waterLevel = .4f;
+        public int x;
+        public int z;
 
-        private WorldTile[] m_tileGrid;
-        private NavMeshSurface m_navMeshSurface;
-
-        [ContextMenu("Start")]
-        private void Start()
+        public ChunkCoordinate(int x, int z)
         {
-            m_navMeshSurface = GetComponent<NavMeshSurface>();
-            gameObject.tag = "Land";
+            this.x = x;
+            this.z = z;
+        }
+
+        public bool Equals(ChunkCoordinate other)
+        {
+            if (other == null)
+            {
+                return false;
+            }
+            else if (other.x == x && other.z == z)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+    
+    public class WorldChunk
+    {
+        private WorldTile[] m_tileGrid;
+        private ChunkCoordinate m_chunkCoordinate;
+        
+        private readonly int m_chunkSize;
+        private readonly GameObject m_chunkObject;
+        private readonly World m_world;
+
+        private readonly MeshRenderer m_meshRenderer;
+        private readonly MeshFilter m_filter;
+        private readonly MeshCollider m_collider;
+        public Vector3 Position => m_chunkObject.transform.position;
+        
+        // active setter and getter
+        public bool IsActive
+        {
+            // need to change how this works i think..
+            get { return m_chunkObject.activeSelf;}
+            set { m_chunkObject.SetActive(value);}
+            
+        }
+        
+        
+        // world chunk construction
+        public WorldChunk(World world, ChunkCoordinate chunkCoords)
+        {
+            m_world = world;
+            m_chunkCoordinate = chunkCoords;
+            m_chunkSize = world.chunkSize;
+            
+            m_chunkObject = new GameObject();
+            m_chunkObject.tag = "Land";
+            m_chunkObject.transform.SetParent(world.transform);
+            m_chunkObject.transform.position = new Vector3(chunkCoords.x * 99, 0f, chunkCoords.z * 99);
+            m_chunkObject.name = "Chunk" + chunkCoords.x + " - " + chunkCoords.z;
+            
+            m_meshRenderer = m_chunkObject.AddComponent<MeshRenderer>();
+            m_filter = m_chunkObject.AddComponent<MeshFilter>();
+            m_collider = m_chunkObject.AddComponent<MeshCollider>();
+            m_meshRenderer.material = m_world.terrainMaterial;
+            
+            GenerateChunkMeshData();
+        }
+
+       
+        private void GenerateChunkMeshData()
+        {
             // check if this is loaded from a save if not then carry on generation from usual
             // need to get the seed somehow for all of the random shit happening
 
-            float[] noiseMap = new float[chunkSize * chunkSize];
+            float[] noiseMap = new float[m_chunkSize * m_chunkSize];
             float xNoiseOffset = Random.Range(-10000f, 10000f);
             float yNoiseOffset = Random.Range(-10000f, 10000f);
-            for (int y = 0; y < chunkSize; y++)
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
-                    float noise = Mathf.PerlinNoise(x * scale + xNoiseOffset, y * scale + yNoiseOffset);
-                    noiseMap[y * chunkSize + x] = noise;
+                    float noise = Mathf.PerlinNoise(x * m_world.scale + xNoiseOffset, y * m_world.scale + yNoiseOffset);
+                    noiseMap[y * m_chunkSize + x] = noise;
                 }
             }
 
-            float[] falloffMap = new float[chunkSize * chunkSize];
-            for (int y = 0; y < chunkSize; y++)
+            float[] falloffMap = new float[m_chunkSize * m_chunkSize];
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
-                    float xv = x / (float) chunkSize * 2 - 1;
-                    float yv = y / (float) chunkSize * 2 - 1;
+                    float xv = x / (float) m_chunkSize * 2 - 1;
+                    float yv = y / (float) m_chunkSize * 2 - 1;
                     float v = Mathf.Max(Mathf.Abs(xv), Mathf.Abs(yv));
-                    falloffMap[y * chunkSize + x] =
+                    falloffMap[y * m_chunkSize + x] =
                         Mathf.Pow(v, 3f) / (Mathf.Pow(v, 3f) + Mathf.Pow(2.2f - 2.2f * v, 3f));
                 }
             }
 
-            m_tileGrid = new WorldTile[chunkSize * chunkSize];
-            for (int y = 0; y < chunkSize; y++)
+            m_tileGrid = new WorldTile[m_chunkSize * m_chunkSize];
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
                     WorldTile tile = new WorldTile();
-                    float noise = noiseMap[y * chunkSize + x];
-                    noise -= falloffMap[y * chunkSize + x];
-                    tile.isWater = noise < waterLevel;
+                    float noise = noiseMap[y * m_chunkSize + x];
+                    noise -= falloffMap[y * m_chunkSize + x];
+                    tile.isWater = noise < m_world.waterLevel;
 
                     // 2d array here
-                    m_tileGrid[y * chunkSize + x] = tile;
+                    m_tileGrid[y * m_chunkSize + x] = tile;
                 }
             }
 
             DrawTerrainMesh(m_tileGrid);
             DrawWaterMesh();
             GenerateTrees(m_tileGrid);
-            
-            m_navMeshSurface.BuildNavMesh();
-            
-            SpawnEnemy();
+            //SpawnEnemy();
         }
 
         private void DrawTerrainMesh(WorldTile[] grid)
@@ -91,11 +143,11 @@ namespace World_Creation
             var triangles = new List<int>();
             var colors = new List<Color>();
 
-            for (int y = 0; y < chunkSize; y++)
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
-                    WorldTile tile = grid[y * chunkSize + x];
+                    WorldTile tile = grid[y * m_chunkSize + x];
                     if (!tile.isWater)
                     {
                         // create all of the vertex positions
@@ -105,19 +157,19 @@ namespace World_Creation
                         Vector3 c = new Vector3(x - .5f, 0, y - .5f);
                         Vector3 d = new Vector3(x + .5f, 0, y - .5f);
                         Vector3[] verticesA = new Vector3[] {a, b, c, b, d, c};
-                        float noise = Mathf.PerlinNoise(x * colourNoiseScale, y * colourNoiseScale);
+                        float noise = Mathf.PerlinNoise(x * m_world.colourNoiseScale, y * m_world.colourNoiseScale);
                       
                         for (int i = 0; i < 6; i++)
                         {
                             vertices.Add(verticesA[i]);
                             triangles.Add(triangles.Count);
-                            Color newGrassColour = Color.Lerp(grassColour, darkGrassColour, noise * 2);
+                            Color newGrassColour = Color.Lerp(m_world.grassColour, m_world.darkGrassColour, noise * 2);
                             colors.Add(newGrassColour);
                         }
 
                         if (x > 0)
                         {
-                            WorldTile leftTile = grid[y * chunkSize + (x - 1)];
+                            WorldTile leftTile = grid[y * m_chunkSize + (x - 1)];
                             if (leftTile.isWater)
                             {
                                 var e = new Vector3(x - .5f, 0, y + .5f);
@@ -129,14 +181,14 @@ namespace World_Creation
                                 {
                                     vertices.Add(verticesB[i]);
                                     triangles.Add(triangles.Count);
-                                    colors.Add(edgeColour);
+                                    colors.Add(m_world.edgeColour);
                                 }
                             }
                         }
 
-                        if (x < chunkSize - 1)
+                        if (x < m_world.chunkSize - 1)
                         {
-                            WorldTile rightTile = grid[y * chunkSize + (x + 1)];
+                            WorldTile rightTile = grid[y * m_chunkSize + (x + 1)];
                             if (rightTile.isWater)
                             {
                                 var e = new Vector3(x + .5f, 0, y - .5f);
@@ -148,14 +200,14 @@ namespace World_Creation
                                 {
                                     vertices.Add(verticesB[i]);
                                     triangles.Add(triangles.Count);
-                                    colors.Add(edgeColour);
+                                    colors.Add(m_world.edgeColour);
                                 }
                             }
                         }
 
                         if (y > 0)
                         {
-                            WorldTile frontTile = grid[(y - 1) * chunkSize + x];
+                            WorldTile frontTile = grid[(y - 1) * m_chunkSize + x];
                             if (frontTile.isWater)
                             {
                                 var e = new Vector3(x - .5f, 0, y - .5f);
@@ -167,14 +219,14 @@ namespace World_Creation
                                 {
                                     vertices.Add(verticesB[i]);
                                     triangles.Add(triangles.Count);
-                                    colors.Add(edgeColour);
+                                    colors.Add(m_world.edgeColour);
                                 }
                             }
                         }
 
-                        if (y < chunkSize - 1)
+                        if (y < m_world.chunkSize - 1)
                         {
-                            WorldTile backTile = grid[(y + 1) * chunkSize + x];
+                            WorldTile backTile = grid[(y + 1) * m_chunkSize + x];
                             if (backTile.isWater)
                             {
                                 var e = new Vector3(x + .5f, 0, y + .5f);
@@ -186,7 +238,7 @@ namespace World_Creation
                                 {
                                     vertices.Add(verticesB[i]);
                                     triangles.Add(triangles.Count);
-                                    colors.Add(edgeColour);
+                                    colors.Add(m_world.edgeColour);
                                 }
                             }
                         }
@@ -198,14 +250,10 @@ namespace World_Creation
             mesh.triangles = triangles.ToArray();
             mesh.colors = colors.ToArray();
             mesh.RecalculateNormals();
-
-            MeshFilter meshFilter = gameObject.AddComponent<MeshFilter>();
-            MeshRenderer meshRenderer = gameObject.AddComponent<MeshRenderer>();
-            MeshCollider meshCollider = gameObject.AddComponent<MeshCollider>();
-
-            meshCollider.sharedMesh = mesh;
-            meshRenderer.material = terrainMaterial;
-            meshFilter.sharedMesh = mesh;
+            
+            m_collider.sharedMesh = mesh;
+            m_meshRenderer.material = m_world.terrainMaterial;
+            m_filter.sharedMesh = mesh;
         }
 
         private void SpawnEnemy()
@@ -213,7 +261,7 @@ namespace World_Creation
             int spawnedAmount = 0;
             while (true)
             {
-                var position = gameObject.transform.position;
+                var position = m_chunkObject.transform.position;
                 Vector3 centre = new Vector3(position.x  + 50, 10, position.z + 50);
                 Vector3 targetPos = RandomPointInBox(centre, new Vector3(100, 0, 100));
                 if (Physics.Raycast(targetPos, -Vector3.up, out var hitPoint))
@@ -224,7 +272,8 @@ namespace World_Creation
                         {
                             break;
                         }
-                        Instantiate(enemyPrefab, hitPoint.point, quaternion.identity);
+                        
+                        Object.Instantiate(m_world.enemyPrefab, hitPoint.point, quaternion.identity);
                         spawnedAmount++;
                     }
                 }
@@ -252,30 +301,29 @@ namespace World_Creation
             MeshFilter meshFilter = go.AddComponent<MeshFilter>();
             MeshCollider meshCollider = go.AddComponent<MeshCollider>();
             MeshRenderer meshRenderer = go.AddComponent<MeshRenderer>();
-            meshRenderer.material = waterMaterial;
+            meshRenderer.material = m_world.waterMaterial;
             
-            go.transform.SetParent(this.transform);
+            go.transform.SetParent(m_chunkObject.transform);
             go.transform.localPosition = new Vector3(0,-.8f,0);
-    
+            
             var vertexIndex = 0;
-            for (int y = 0; y < chunkSize; y++)
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
                     vertices.Add(new Vector3(x,0,y));
-                    uvs.Add(new Vector2(x / (float)chunkSize,y / (float)chunkSize));
+                    uvs.Add(new Vector2(x / (float)m_chunkSize,y / (float)m_chunkSize));
                     
-                    if (x < chunkSize - 1 && y < chunkSize - 1)
+                    if (x < m_chunkSize - 1 && y < m_chunkSize - 1)
                     {
-                        triangles.Add(vertexIndex + chunkSize);
-                        triangles.Add(vertexIndex + chunkSize + 1);
+                        triangles.Add(vertexIndex + m_chunkSize);
+                        triangles.Add(vertexIndex + m_chunkSize + 1);
                         triangles.Add(vertexIndex);
                         
                         triangles.Add(vertexIndex + 1);
                         triangles.Add(vertexIndex);
-                        triangles.Add(vertexIndex + chunkSize + 1);
+                        triangles.Add(vertexIndex + m_chunkSize + 1);
                     }
-
                     vertexIndex++;
                 }
             }
@@ -289,29 +337,29 @@ namespace World_Creation
 
         private void GenerateTrees(WorldTile[] grid)
         {
-            float[] noiseMap = new float[chunkSize * chunkSize];
+            float[] noiseMap = new float[m_chunkSize * m_chunkSize];
             float xNoiseOffset = Random.Range(-10000f, 10000f);
             float yNoiseOffset = Random.Range(-10000f, 10000f);
-            for (int y = 0; y < chunkSize; y++)
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
-                    float noise = Mathf.PerlinNoise(x * treeNoiseScale + xNoiseOffset, y * treeNoiseScale + yNoiseOffset);
-                    noiseMap[y * chunkSize + x] = noise;
+                    float noise = Mathf.PerlinNoise(x * m_world.treeNoiseScale + xNoiseOffset, y * m_world.treeNoiseScale + yNoiseOffset);
+                    noiseMap[y * m_chunkSize + x] = noise;
                 }
             }
 
-            for (int y = 0; y < chunkSize; y++)
+            for (int y = 0; y < m_chunkSize; y++)
             {
-                for (int x = 0; x < chunkSize; x++)
+                for (int x = 0; x < m_chunkSize; x++)
                 {
-                    WorldTile tile = grid[y * chunkSize + x];
+                    WorldTile tile = grid[y * m_chunkSize + x];
                     if (!tile.isWater)
                     {
-                        float v = Random.Range(0f, treeDensity);
-                        if (noiseMap[y * chunkSize + x] < v)
+                        float v = Random.Range(0f, m_world.treeDensity);
+                        if (noiseMap[y * m_chunkSize + x] < v)
                         {
-                            GameObject tree = Instantiate(treePrefab, transform);
+                            GameObject tree = GameObject.Instantiate(m_world.treePrefab, m_chunkObject.transform);
                             tree.transform.localPosition = new Vector3(x,0,y);
                             tree.transform.rotation = Quaternion.Euler(0,Random.Range(0,360.0f),0);
                             tree.transform.localScale = Vector3.one * Random.Range(0.6f, 0.9f);

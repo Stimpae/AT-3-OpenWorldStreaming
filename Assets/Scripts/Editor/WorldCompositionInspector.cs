@@ -52,7 +52,6 @@ public class WorldCompositionInspector : Editor
             instance.transform.position = hit.point;
             instance.transform.rotation = Quaternion.Euler(defaultEulers.x, SceneView.lastActiveSceneView.camera.transform.rotation.eulerAngles.y + defaultEulers.y, defaultEulers.z);
             instance.name = m_worldComposition.placementObject.name;
-            
         }
     }
 

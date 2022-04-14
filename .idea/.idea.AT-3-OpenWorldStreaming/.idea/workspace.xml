@@ -21,77 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="0e82a927-dc09-43c5-ad77-a286f6684c23" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/1_-vO6vIHeE67CAm6Mk3AcSA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/1_-vO6vIHeE67CAm6Mk3AcSA.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Materials/M_DefaultTerrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Materials/M_DefaultTerrain.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/T_TestHeightmap.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/T_TestHeightmap.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture0-3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture1-3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture2-3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-0.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-0.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-1.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-1.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-2.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-3.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Textures/Texture3-3.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WorldPartition.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WorldPartition.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mesh.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh/MeshData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh/MeshData.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleCameraController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/ELevelOfDetail.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/ELevelOfDetail.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldComposition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldComposition.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-HighQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-MediumQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-MediumQuality.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/World Streaming/WorldChunk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/World Streaming/WorldChunk.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/New Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/New Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WorldTestScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WorldTestScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/InteractableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/InteractableObject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,6 +62,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../CGD/CGD-2022/Assets/Core/Scripts/GameTeamData.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChun.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -132,7 +79,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/ELevelOfDetail.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh/MeshData.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementDestination.cs" />
@@ -144,7 +90,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainObject.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/FriendlyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/IInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/BoatPopUpMenu.cs" />
@@ -153,7 +98,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/EnemyController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/BoatController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/EnemyBoatController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs" />
       </list>
     </option>
   </component>
@@ -219,7 +167,13 @@
       <workItem from="1647944932994" duration="10145000" />
       <workItem from="1647968428292" duration="6793000" />
       <workItem from="1648029393783" duration="252000" />
-      <workItem from="1648065685771" duration="617000" />
+      <workItem from="1648065685771" duration="4999000" />
+      <workItem from="1648074596533" duration="3599000" />
+      <workItem from="1648115891995" duration="2188000" />
+      <workItem from="1648461651354" duration="16027000" />
+      <workItem from="1649764957327" duration="10107000" />
+      <workItem from="1649888093195" duration="5490000" />
+      <workItem from="1649909460414" duration="1956000" />
     </task>
     <servers />
   </component>
@@ -252,10 +206,11 @@
       <screen x="0" y="0" width="2293" height="929" />
     </state>
     <state x="1297" y="111" key="SettingsEditor/0.0.2293.929@0.0.2293.929" timestamp="1647629295095" />
-    <state x="93" y="93" width="2108" height="744" key="VCS.FileHistoryDialog" timestamp="1646869911898">
-      <screen x="0" y="0" width="2293" height="929" />
+    <state x="79" y="93" width="1792" height="744" key="VCS.FileHistoryDialog" timestamp="1648463743509">
+      <screen x="0" y="0" width="1949" height="929" />
     </state>
     <state x="62" y="83" width="1413" height="668" key="VCS.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1646144656686" />
+    <state x="79" y="93" width="1792" height="744" key="VCS.FileHistoryDialog/0.0.1949.929@0.0.1949.929" timestamp="1648463743509" />
     <state x="93" y="93" width="2108" height="744" key="VCS.FileHistoryDialog/0.0.2293.929@0.0.2293.929" timestamp="1646869911898" />
     <state x="367" y="162" key="Vcs.Push.Dialog.v2" timestamp="1646216821045">
       <screen x="0" y="0" width="1536" height="834" />
