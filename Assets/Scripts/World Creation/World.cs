@@ -26,7 +26,7 @@ public class World : MonoBehaviour
     private NavMeshSurface m_navMeshSurface;
     
     // only 4 chunks rendered at the same time?
-    private static readonly int m_worldSize = 20;
+    private static readonly int m_worldSize = 1;
     private List<ChunkCoordinate> m_activeWorldChunks = new List<ChunkCoordinate>();
     private WorldChunk[] m_loadedChunks = new WorldChunk[m_worldSize * m_worldSize];
     private int m_viewDistanceInChunks = 2;
@@ -34,31 +34,32 @@ public class World : MonoBehaviour
     private ChunkCoordinate m_currentPlayerChunkCoord;
     private ChunkCoordinate m_playerLastChunkCoord;
 
-    private Dictionary<Vector2, string> m_chunkPaths;
+    private Dictionary<Vector2, string> m_chunkPaths = new Dictionary<Vector2, string>();
     
     // Start is called before the first frame update
     void Start()
     {
         m_navMeshSurface = GetComponent<NavMeshSurface>();
-        
         BuildWorld();
-
-        Vector3 spawnPosition = new Vector3((m_worldSize * 99) / 2f, 5f, (m_worldSize * 99) / 2f);
-        SpawnManager.Instance.SpawnPlayer(spawnPosition, 150.0f);
-
-        m_playerLastChunkCoord = GetCoordinateFromVector3(PlayerController.Instance.transform.position);
     }
 
     private void BuildWorld()
     {
-        for (int x = (m_worldSize / 2) - m_viewDistanceInChunks; x < (m_worldSize / 2) + m_viewDistanceInChunks; x++)
+        // create all of the chunks
+        for (int x = 0; x < m_worldSize; x++)
         {
-            for (int z = (m_worldSize / 2) - m_viewDistanceInChunks; z < (m_worldSize / 2) + m_viewDistanceInChunks; z++)
+            for (int z = 0; z < m_worldSize; z++)
             {
                 CreateChunk(x,z);
             }
         }
         
+        Vector3 spawnPosition = new Vector3((m_worldSize * 99) / 2f, 5f, (m_worldSize * 99) / 2f);
+        SpawnManager.Instance.SpawnPlayer(spawnPosition, 150.0f);
+
+        m_playerLastChunkCoord = GetCoordinateFromVector3(PlayerController.Instance.transform.position);
+        
+        // then build the world
         m_navMeshSurface.BuildNavMesh();
     }
 
@@ -73,8 +74,17 @@ public class World : MonoBehaviour
 
     private void CreateChunk(int x, int z)
     {
+        
         m_loadedChunks[x * m_worldSize + z] = new WorldChunk(this, new ChunkCoordinate(x,z));
         m_activeWorldChunks.Add(new ChunkCoordinate(x,z));
+
+        ChunkData data = m_loadedChunks[x * m_worldSize + z].chunkData;
+        
+        // saves the data once, gets a reference to the path and position of the chunk to be sued for loading
+        string saveName = x + "-" + z;
+        string savePath;
+        DataManager.SaveData(out savePath, data, saveName);
+        m_chunkPaths.Add(new Vector2(x,z), savePath);
     }
 
     private void CheckViewDistance()

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
 using Object = UnityEngine.Object;
@@ -52,6 +53,7 @@ namespace World_Creation
         private readonly MeshFilter m_filter;
         private readonly MeshCollider m_collider;
         public Vector3 Position => m_chunkObject.transform.position;
+        public ChunkData chunkData;
         
         // active setter and getter
         public bool IsActive
@@ -61,7 +63,6 @@ namespace World_Creation
             set { m_chunkObject.SetActive(value);}
             
         }
-        
         
         // world chunk construction
         public WorldChunk(World world, ChunkCoordinate chunkCoords)
@@ -81,6 +82,7 @@ namespace World_Creation
             m_collider = m_chunkObject.AddComponent<MeshCollider>();
             m_meshRenderer.material = m_world.terrainMaterial;
             
+            chunkData = new ChunkData();
             GenerateChunkMeshData();
         }
 
@@ -133,7 +135,7 @@ namespace World_Creation
             DrawTerrainMesh(m_tileGrid);
             DrawWaterMesh();
             GenerateTrees(m_tileGrid);
-            //SpawnEnemy();
+            SpawnEnemy();
         }
 
         private void DrawTerrainMesh(WorldTile[] grid)
@@ -254,6 +256,8 @@ namespace World_Creation
             m_collider.sharedMesh = mesh;
             m_meshRenderer.material = m_world.terrainMaterial;
             m_filter.sharedMesh = mesh;
+
+            chunkData.chunkMeshData = new MeshData(mesh);
         }
 
         private void SpawnEnemy()
@@ -333,6 +337,8 @@ namespace World_Creation
             mesh.RecalculateNormals();
             meshFilter.sharedMesh = mesh;
             meshCollider.sharedMesh = mesh;
+            
+            chunkData.chunkMeshData = new MeshData(mesh);
         }
 
         private void GenerateTrees(WorldTile[] grid)
@@ -363,6 +369,10 @@ namespace World_Creation
                             tree.transform.localPosition = new Vector3(x,0,y);
                             tree.transform.rotation = Quaternion.Euler(0,Random.Range(0,360.0f),0);
                             tree.transform.localScale = Vector3.one * Random.Range(0.6f, 0.9f);
+                            
+                            StaticObjectData objectData = new StaticObjectData(tree.transform.localPosition, tree.transform.eulerAngles, tree.transform.localScale);
+                            objectData.prefabPath = AssetDatabase.GetAssetPath(m_world.treePrefab);
+                            chunkData.staticObjectData.Add(objectData);
                         }
                     }
 

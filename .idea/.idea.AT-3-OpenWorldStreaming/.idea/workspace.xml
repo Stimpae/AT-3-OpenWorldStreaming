@@ -1,44 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e82a927-dc09-43c5-ad77-a286f6684c23" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="b9dc6120-b481-426a-90b6-53197cd8b09b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Data/ChunkData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Data/ChunkData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Data/StaticObjectData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/Data/StaticObjectData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/World Streaming/WorldChunk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/World Streaming/WorldChunk.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/NavMesh.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/New Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/New Scene/New Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WorldTestScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Testing/WorldTestScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/InteractableObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/InteractableObject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AT-3-OpenWorldStreaming/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/projectSettingsUpdater.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Open World Game/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldChunkingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WorldChunkingScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChun.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,83 +37,48 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/BoatController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.7.9/Runtime/Behaviours/CinemachineBrain.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/EBehaviourStates.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh/MeshData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementDestination.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../CGD/CGD-2022/Assets/Core/Scripts/GameTeamData.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChun.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/PartitionManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/DataManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh Creation/TerrainObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainLODData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Data/DataManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Mesh/MeshData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldPartition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainPartition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Data/StreamingManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/ELevelOfDetail.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Terrain/TerrainObjectData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/Mesh/MeshData.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovementDestination.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/EnemyAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/EBehaviourStates.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldChunk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldStreaming.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/WorldComposition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldTile.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Streaming/TerrainObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/Singleton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/FriendlyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/IInteractable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/BoatPopUpMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Interactables/InteractableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/BoatController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/EnemyBoatController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/SpawnManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/WorldCompositionInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/World.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/World Creation/WorldChunk.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="25klN5JKI3eciYnXqV4735Nthd1" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29gXMtaoOAro6yG9L6iRvXwcGHg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Discover.Launch.Via.Unity" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "rider.run.widget.enabled.cache": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Program Files\2021.1.24f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\University Files\3rd Year\AT\Task 3\Project\AT-3-OpenWorldStreaming&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\University Files\3rd Year\AT\Task 3\Project\AT-3-OpenWorldStreaming" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -134,8 +86,9 @@
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
+      <option name="projectPathOnTarget" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -143,91 +96,24 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0e82a927-dc09-43c5-ad77-a286f6684c23" name="Default Changelist" comment="" />
-      <created>1646078924659</created>
+      <changelist id="b9dc6120-b481-426a-90b6-53197cd8b09b" name="Default Changelist" comment="" />
+      <created>1653535661188</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1646078924659</updated>
-      <workItem from="1646078929677" duration="10891000" />
-      <workItem from="1646138296086" duration="12358000" />
-      <workItem from="1646171554771" duration="14901000" />
-      <workItem from="1646233093748" duration="47000" />
-      <workItem from="1646239871103" duration="3765000" />
-      <workItem from="1646259580926" duration="1742000" />
-      <workItem from="1646742997448" duration="13824000" />
-      <workItem from="1646770210283" duration="1872000" />
-      <workItem from="1646840035894" duration="4201000" />
-      <workItem from="1646849687771" duration="22214000" />
-      <workItem from="1647464621041" duration="608000" />
-      <workItem from="1647471485129" duration="1875000" />
-      <workItem from="1647536536051" duration="1000" />
-      <workItem from="1647542637075" duration="4606000" />
-      <workItem from="1647606167163" duration="13365000" />
-      <workItem from="1647777725282" duration="47298000" />
-      <workItem from="1647944932994" duration="10145000" />
-      <workItem from="1647968428292" duration="6793000" />
-      <workItem from="1648029393783" duration="252000" />
-      <workItem from="1648065685771" duration="4999000" />
-      <workItem from="1648074596533" duration="3599000" />
-      <workItem from="1648115891995" duration="2188000" />
-      <workItem from="1648461651354" duration="16027000" />
-      <workItem from="1649764957327" duration="10107000" />
-      <workItem from="1649888093195" duration="5490000" />
-      <workItem from="1649909460414" duration="1956000" />
+      <updated>1653535661188</updated>
+      <workItem from="1653535671448" duration="323000" />
+      <workItem from="1655117116592" duration="99000" />
+      <workItem from="1657811659954" duration="2954000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="980" y="166" key="RiderGenerateDialog" timestamp="1647888191006">
-      <screen x="0" y="0" width="2293" height="929" />
-    </state>
-    <state x="980" y="166" key="RiderGenerateDialog/0.0.2293.929@0.0.2293.929" timestamp="1647888191006" />
-    <state x="1297" y="111" key="SettingsEditor" timestamp="1647629295095">
-      <screen x="0" y="0" width="2293" height="929" />
-    </state>
-    <state x="1297" y="111" key="SettingsEditor/0.0.2293.929@0.0.2293.929" timestamp="1647629295095" />
-    <state x="79" y="93" width="1792" height="744" key="VCS.FileHistoryDialog" timestamp="1648463743509">
-      <screen x="0" y="0" width="1949" height="929" />
-    </state>
-    <state x="62" y="83" width="1413" height="668" key="VCS.FileHistoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1646144656686" />
-    <state x="79" y="93" width="1792" height="744" key="VCS.FileHistoryDialog/0.0.1949.929@0.0.1949.929" timestamp="1648463743509" />
-    <state x="93" y="93" width="2108" height="744" key="VCS.FileHistoryDialog/0.0.2293.929@0.0.2293.929" timestamp="1646869911898" />
-    <state x="367" y="162" key="Vcs.Push.Dialog.v2" timestamp="1646216821045">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="367" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1646216821045" />
-    <state x="0" y="70" width="781" height="841" key="dock-window-1" timestamp="1647706001682">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="0" y="70" width="781" height="841" key="dock-window-1/0.0.1536.834@0.0.1536.834" timestamp="1647706001682" />
-    <state x="1366" y="217" key="run.anything.popup" timestamp="1647800040014">
-      <screen x="0" y="0" width="2293" height="929" />
-    </state>
-    <state x="1366" y="217" key="run.anything.popup/0.0.2293.929@0.0.2293.929" timestamp="1647800040014" />
-    <state x="542" y="178" width="672" height="609" key="search.everywhere.popup" timestamp="1646224731150">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="542" y="178" width="672" height="609" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1646224731150" />
-    <state x="810" y="198" width="672" height="678" key="search.everywhere.popup/0.0.2293.929@0.0.2293.929" timestamp="1646082131964" />
   </component>
 </project>

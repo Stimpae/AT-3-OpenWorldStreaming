@@ -23,9 +23,11 @@ namespace Player
 
         private void Awake()
         {
+            Instance = this;
+            
             m_active = true;
             cam = Camera.main;
-            Instance = this;
+            
 
             GameInputs inputs = new GameInputs();
             inputs.Enable();
@@ -33,6 +35,12 @@ namespace Player
             inputs.Player.InteractMovement.performed += e => LeftMouseButtonAction();
             inputs.Player.Attack.performed += e => Attack();
             inputs.Player.BoatSummon.performed += e => SpawnBoat();
+        }
+
+        private void Start()
+        { 
+            
+            
         }
 
         private void Update()
